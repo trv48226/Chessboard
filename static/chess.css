@@ -1,0 +1,41 @@
+body {
+  background-color: tan;
+}
+
+button.button{
+    background-color: black;
+    border: 25px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    margin: auto;
+    display: flex;
+    padding: 25px;
+}
+
+table.chessBoard {
+    align-items: center;
+    background: #Grey;
+    border: 25px;
+    border-collapse: collapse;
+    display: flex;
+    margin: auto;
+    width: 270px;
+    padding: 25px;
+}
+
+td.square {
+    width: 30px; height: 30px;
+    border: 2px solid #333;
+}
+
+tr.row:nth-child(odd) td.square:nth-child(even),
+tr.row:nth-child(even) td.square:nth-child(odd) {
+    background: black;
+}
+
+tr.row:nth-child(odd) td.square:nth-child(odd),
+tr.row:nth-child(even) td.square:nth-child(even) {
+    background: white;
+}
