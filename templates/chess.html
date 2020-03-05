@@ -9,86 +9,23 @@
 <body>
     <button class="button" id="changeButton" onclick="myAjax()">Flip Colors</button>
 	<table class="chessBoard" id="board">
-    	<tr class="row">
-            <td style="background-color: white" class="square even"></td>
-            <td style="background-color: black" class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-        </tr>
-        <tr class="row">
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-        </tr>
-        <tr class="row">
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-        </tr>
-        <tr class="row">
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-        </tr>
-        <tr class="row">
-           <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-        </tr>
-        <tr class="row">
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-        </tr>
-        <tr class="row">
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-        </tr>
-        <tr class="row">
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-            <td class="square odd"></td>
-            <td class="square even"></td>
-        </tr>
+        {% for i in range(0, 8)%}
+            <tr class="row">
+            {% for j in range(0, 8)%}
+               {% if i % 2 == 0 %}
+                  {% if j % 2 == 0 %}
+                    <td class="square even"></td>
+                  {% else %}
+                    <td class="square odd"></td>
+                  {% endif %}
+               {% else %}
+                    {% if j % 2 == 0 %}
+                        <td class="square odd"></td>
+                    {% else %}
+                        <td class="square even"></td>
+                    {% endif %}
+               {% endif %}
+            {% endfor %}
+        {% endfor %}
     </table>
-
 </body>

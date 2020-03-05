@@ -25,8 +25,12 @@ function buttonFlip(){
 }
 
 function myAjax(){
-let color1 = document.getElementsByClassName("even")[0].style.backgroundColor;
-let color2 = document.getElementsByClassName("odd")[0].style.backgroundColor;
+let style = getComputedStyle(document.getElementsByClassName("even")[0])
+let style2 = getComputedStyle(document.getElementsByClassName("odd")[0])
+let background = style.backgroundColor
+let background2 =style2.backgroundColor
+color1 = background;
+color2 = background2;
 $.ajax({
     url : "/flip",
     type: "POST",
