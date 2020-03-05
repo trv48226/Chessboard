@@ -37,7 +37,7 @@ function myAjax(){
         data: JSON.stringify({
             'color1': color1,
             'color2': color2
-        }),
+            }),
         contentType: 'application/json;charset=UTF-8',
         success: function(response)
         {
