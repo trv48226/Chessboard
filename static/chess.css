@@ -16,7 +16,6 @@ button.button{
 
 table.chessBoard {
     align-items: center;
-    background: #Grey;
     border: 25px;
     border-collapse: collapse;
     display: flex;
@@ -30,12 +29,10 @@ td.square {
     border: 2px solid #333;
 }
 
-tr.row:nth-child(odd) td.square:nth-child(even),
-tr.row:nth-child(even) td.square:nth-child(odd) {
-    background: black;
+td.square.odd{
+    background-color: black;
 }
 
-tr.row:nth-child(odd) td.square:nth-child(odd),
-tr.row:nth-child(even) td.square:nth-child(even) {
-    background: white;
+td.square.even{
+    background-color: white;
 }

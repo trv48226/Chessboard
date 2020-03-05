@@ -1,0 +1,9 @@
+config.py
+*.pyc
+.DS_Store
+.idea*
+config/*.py
+*.csv
+*.log
+.vscode/settings.json
+**/.vscode/**
