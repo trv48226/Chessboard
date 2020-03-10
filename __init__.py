@@ -12,9 +12,13 @@ def chess_board():
 
 @app.route('/flip', methods=["POST"])
 def flip_colors():
-    first_color = str(json.loads(request.data).get('color1'))
-    second_color = str(json.loads(request.data).get('color2'))
-    my_dict = {'color1': first_color, 'color2': second_color}
+    call_json = json.loads(request.data)
+    first_color = str(call_json.get('color1'))
+    second_color = str(call_json.get('color2'))
+    my_dict = {
+        'color1': first_color,
+        'color2': second_color
+    }
     return my_dict
 
 
